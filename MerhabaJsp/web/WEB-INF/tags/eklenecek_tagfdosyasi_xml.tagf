@@ -1,0 +1,6 @@
+<%@tag pageEncoding="UTF-8"%>
+<h2>tag<font color="red">f</font>
+ 
+<%
+  out.print(" dosyası xml eklendi</h2>");
+%>

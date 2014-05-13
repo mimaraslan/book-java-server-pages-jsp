@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <jsp-version>2.0</jsp-version>
+  <short-name>customtaglibrarykullanimitld</short-name>
+  <uri>/WEB-INF/tlds/CustomTagLibraryKullanimiTLD</uri>
+  <info>Tags Library Descriptor TLD </info>
+
+   <tag>
+        <name>CustomTagLibraryKullanimiTLDadi</name>
+        <tag-class>paketimiz.CustomTagLibraryKullanimiJavaSinifi</tag-class>
+        <body-content>empty</body-content>
+        <info>TLD dosyasi tagimiz</info>
+
+            <attribute>
+                    <name>mesajimiz</name>
+                    <required>false</required>
+            </attribute>
+    </tag>
+
+</taglib>

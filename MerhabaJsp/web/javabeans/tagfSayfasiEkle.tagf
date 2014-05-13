@@ -1,0 +1,3 @@
+<%
+  out.print("tagfSayfasiEkle.tagf den gelen mesaj");
+%>

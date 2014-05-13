@@ -1,0 +1,10 @@
+SMAP
+nameValuePair_tagx.java
+JSP
+*S JSP
+*F
++ 0 nameValuePair.tagx
+WEB-INF/tags/nameValuePair.tagx
+*L
+4:70,5
+*E

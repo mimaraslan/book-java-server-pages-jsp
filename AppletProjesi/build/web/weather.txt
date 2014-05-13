@@ -1,0 +1,209 @@
+
+            Weather applet - Copyright (C) by Anfy Team 2001-2002
+
+This applet could generate fog, rain and lightnings effects on a background
+image or color. 
+This applet contains code by Richard T. Elmore used under license.
+
+************************************************************************
+
+NECESSARY FILES.
+
+Apart from an optional background image and an optional overlay image,
+the following 3 ".class" files must be uploaded: 
+
+weather.class
+Lware.class
+anfy.class
+
+
+Plus, weather.jar for speedy loading on recent browsers.
+
+*********************************************************************
+
+EXAMPLE.
+
+Insert the <applet> tag in your html document as follows to add this applet
+to your page (Comments after the ";" symbol are code explanations and
+acceptable min/max values. They are not part of the applet language):
+
+
+<applet archive="weather.jar" code="weather.class" width="300" height="238"> ; Name, Width, Height.
+<param name="credits" value="Applet by Anfy Team (www.anfyteam.com)">	; Credits line.
+<param name="regcode" value="no">		; Registration code (if you have it).
+<param name="reglink" value="no">		; Optional URL link when the applet is "clicked".
+<param name="regnewframe" value="yes">		; Reglink opened in new frame ?
+<param name="regframename" value="_blank">	; Name of new frame for reglink.
+<param name="statusmsg" value="Weather applet">	; Statusbar message.
+<param name="res" value="1">			; Resolution (1-8).
+<param name="bgimage" value="timelost.jpg">	; Background image.
+<param name="bgcolor" value="ff0000">		; Background color.
+<param name="fogon" value="yes">		; Fog effect ("yes","no")
+<param name="fogstrength" value="8">		; Fog intensity (1 .. 256)
+<param name="fogmin" value="0">                 ; Fog min value allowed (0 .. 255)
+<param name="fogmax" value="0">                 ; Fog max value allowed (0 .. 255)
+<param name="fogmult" value="256">              ; Fog multiplier (1 .. 512)
+<param name="fogdirection" value="right">	; Fog direction ("left","right","up","down")
+<param name="fogspeed" value="2">		; Fog speed.
+<param name="foginteraction" value="no">	; Fog interactive mode ("no","in","out")
+<param name="rainon" value="yes">		; Rain effect ("yes","no")
+<param name="rainstrength" value="80">		; Rain transparency (0 .. 255)
+<param name="raindropsnumber" value="2000">	; Rain drops number.
+<param name="raincolor1" value="ddddee">	; Rain color 1.
+<param name="raincolor2" value="cccccc">	; Rain color 2.
+<param name="rainspeed" value="4">		; Rain speed.
+<param name="raindifspeed" value="8">           ; Rain drops difference of speed
+<param name="raininteraction" value="no">	; Rain interactive mode ("no","in","out")
+<param name="lightningon" value="yes">		; Lightning effect on/off ("yes" or "no")
+<param name="lightningsound" value="boom.au">	; Thunder sound or "no".
+<param name="lightningstrength" value="8">	; Lightning strength value.
+<param name="lightningminstrenght" value="1">   ; Lightning min strength.
+<param name="lightningmaxstrenght" value="40">  ; Lightning max strength.
+<param name="lightningymax" value="200">        ; Lightning max y reaching
+<param name="lightningbright" value="8">	; Lightning background max brightness (1..8)
+<param name="lmindirchange" value="10">         ; Lightning min direction change.
+<param name="lmaxdirchange" value="9000">       ; Lightning max direction change.
+<param name="lbranchvalue" value="200">         ; Lightning branches creation value.
+<param name="lgrminnumber" value="1">           ; Lightnings min number each group.
+<param name="lgrmaxnumber" value="7">           ; Lightnings max number each group.
+<param name="lgroupsmindelay" value="50">       ; Lightning groups min delay.
+<param name="lgroupsmaxdelay" value="200">      ; Lightning groups max delay.
+<param name="overimg" value="no">		; Optional image over applet.
+<param name="overimgX" value="0">		; Over image X offset
+<param name="overimgY" value="0">		; Over image Y offset
+<param name="memdelay" value="1000">		; Memory deallocation delay.
+<param name="priority" value="3">		; Task priority (1..10).
+<param name="MinSYNC" value="10">		; Min. milliseconds/frame for sync.
+Sorry, your browser doesn't support Java. 	; Message for no java browsers.
+</applet>
+
+*********************************************************************
+
+PARAMETER DESCRIPTIONS.
+
+The following instructions describe how to change parameters:
+
+Attempting to change the credit parameter will disable the applet.
+To activate the reg parameters read the shareware registration notes.
+In the "regcode" parameter, place the registration code you
+purchased from the author. If the code is correct and the applet is run from
+the registered domain name, you can use "link" parameters to link to a URL
+when the applet is "clicked".
+
+If you set "regnewframe" to "YES", you can specify a specific frame location
+for the reglink:
+
+"_blank"  : To load the link in a new blank unnamed browser window.
+"_self"   : To load the link into the same window the applet occupies.
+"_parent" : To load the link into the immediate FRAMESET parent.
+"_top"    : To load the link into the top body of the window.
+
+You can also set a custom frame name, such as "myframe1".
+
+With the "overimg" parameter you can specify the name of an image that will
+be painted over the applet. The best options are transparent GIF images.
+NOTE: Animated GIF images are supported, but will be displayed as animated
+only on latest browsers (Netscape 4 and Explorer 4 or newer).
+With "overimgX" and "overimgY" you can center the image over the applet area.
+
+With the "statusmsg" parameter you can set a message which appear at the bottom
+of the browser window, when you mouse-over the applet.
+
+Applet size is determined by "res": "res=1" shows the graphic at original size, "res=2" shows
+it at double size, etc.
+So, If res=1, remember to place the exact size of image in "width" and "height" tags.
+If res=2, place double values, if res=3 place triple values etc. (In fact, res is a sort of zoomer).
+
+With the "bgimage" parameter, you can add an image to the applet's background.
+
+If you do not use a background image, you can choose a background color, with the
+"bgcolor" parameter (use a RRGGBB format).
+
+In this applet you can one or more weather conditions: Fog, Rain and Lightnings.
+
+** Fog **
+
+You can switch on/off the fog using the "fogon" parameter (use "yes" or "no" value).
+
+Use the "fogstrength" parameter to set the fog intensity (1 .. 256).
+
+Use "fogmin" and "fogmax" to determine the minimum and maximum fog values
+allowed (0 .. 255). For example, if you set fogmin=0 and fogmax=0, the fog
+could range from 0 (no fog) to 255 (fully white fog). If you increase the
+fogmin value, darker parts with no fog will become less frequent.
+If you decrease the fogmax, fully white fog parts will be less frequent.
+
+With the "fogmult" parameter (1 .. 512) you set the fog value multiplier.
+Lower values means less fog consistency, higher values will fill all the
+applet area with unified fog.
+
+The "fogdirection" parameter sets the fog direction ("left","right","up","down").
+
+With "fogspeed" you decide the fog speed.
+
+With the "foginteraction" parameter, you can choose between three interactive modes: 
+- "no" for no fog user interaction.
+- "in" the fog will start when the mouse pointer is over the applet area.
+- "out" the fog will stop when the mouse pointer is over the applet area.
+
+
+** Rain **
+
+You can switch on/off the rain effect using the "rainon" parameter ("yes" or "no").
+
+Using the "rainstrength" parameter (1 .. 255) you choose the transparency of rain.
+Lower values will make the rain less visible and more transparent.
+Higher values will make the rain more visible and less transparent.
+
+With the "raindropsnumber" parameter you choose the falling drops number.
+
+With "raincolor1" and "raincolor2" you select the first and last color
+for the color range used to paint the rain drops. Specify the same
+color on the two parameters if you want all the drops to look identical.
+
+With "rainspeed", you select the rain speed (base value).
+
+With "raindifspeed" you select the rain drops difference of speed (difference
+of speed that drops may reach from base rain speed value).
+
+Using the "raininteraction" parameter, you can choose between three interactive modes: 
+- "no" no user rain user interaction.
+- "in" the rain will start when the mouse pointer is over the applet area.
+- "out" the rain will stop when the mouse pointer is over the applet area.
+
+
+** Lightnings **
+
+
+You can switch on/off the lightning effect using the "lightningon" parameter ("yes","no").
+
+If you want, you can set a sound for the thunders secifying an 8bit 8Khz mono .au file
+in the "lightningsound" parameter. Otherwise set it to "no".
+
+Using the "lightningstrength" parameter you can choose the average lightnings size.
+Additionally, use "lightningminstrenght" and "lightningmaxstrenght" to contain the
+lightnings size into a certain range. It could be useful for example to place these
+at high values to see lightnings very small and so very far.
+Lower values instead create bigger thunders which seems nearer.
+
+With the "lightningymax" parameter you decide the maximum y position reachable
+by the lightning, from top to bottom. This value may be imprecise if "branchvalue"
+is high because it does not include the branches which may go lower.
+
+With the "lightningbright" parameter (1..8) you set the max background flashing.
+
+With the "lmindirchange" parameter you set the minimim value for direction
+speed change. Higher values may give less curved and more vertical lightnings.
+
+With the "lmaxdirchange" parameter you set the maximum value for direction
+speed change. Lower values may give more curved and more horizontal lightnings.
+
+With the "lbranchvalue" parameter you set the branches frequency of lightnings.
+
+With the "lgrminnumber" and "lgrmaxnumber" parameters you decide the min and
+max number of lightnings for each lighnings group.
+
+With the "lgroupsmindelay" and "lgroupsmaxdelay" parameters you decide the min
+and max delay of time (with no lightnings) between each lighnings group.
+
+

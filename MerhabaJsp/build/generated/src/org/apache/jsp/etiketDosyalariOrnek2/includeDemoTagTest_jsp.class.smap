@@ -1,0 +1,16 @@
+SMAP
+includeDemoTagTest_jsp.java
+JSP
+*S JSP
+*F
++ 0 includeDemoTagTest.jsp
+etiketDosyalariOrnek2/includeDemoTagTest.jsp
++ 1 included.html
+etiketDosyalariOrnek2/included.html
+*L
+1,13:51
+1#1,15:64
+13#0,6:78
+18:104,7
+18,4:85
+*E

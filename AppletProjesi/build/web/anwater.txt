@@ -1,0 +1,161 @@
+
+          Anfy Water - Copyright (C) by Fabio Ciucci 1997-2002
+
+
+This applet can simulate water wavings over any GIF or JPG image. This 
+applet is fully parametrized, so you can generate many variations of 
+water wavings.
+
+The animation fish.gif is a courtesy of Paolo Sioli / Digibit.
+
+*************************************************************************
+
+As well as the image to deform, and an optional foreground image, the 
+following 3 ".class" files must be uploaded: 
+
+AnWater.class 
+Lware.class
+anfy class
+
+Plus, AnWater.jar for speedy loading on recent browsers.
+
+*************************************************************************
+
+EXAMPLE.
+
+Insert the <applet> tag in your html document as follows to add this applet
+to your page (Comments after the ";" symbol are code explanations and
+acceptable min/max values. They are not part of the applet language):
+
+
+<applet archive="AnWater.jar" code="AnWater.class" width="128" height="128">
+<param name="credits" value="Applet by Fabio Ciucci (www.anfyteam.com)">
+<param name="regcode" value="NO">         ; Registration code (if you have it)
+<param name="reglink" value="NO">         ; Optional URL link when applet
+                                          is "clicked".
+<param name="regnewframe" value="YES">       ; Reglink opened in new frame?
+<param name="regframename" value="_blank">   ; Name of new frame for reglink
+<param name="statusmsg" value="Water applet">; Statusbar message
+<param name="image" value="imfad1.gif">      ; Image to load
+<param name="res" value="1">                ; resolution (1 .. 8)
+<param name="light" value="YES">            ; Light effects ("YES" or "NO")
+<param name="minlight" value="0">           ; Lowest light (-255 .. 255)
+<param name="maxlight" value="100">         ; Highest light (-255 .. 255)
+<param name="autodesign" value="YES">       ; Auto design ("YES" or "NO")
+<param name="density" value="4">            ; Density of fluid (2 .. 6)
+<param name="fishnum" value="0">            ; Number of fishes (0 .. 2)
+<param name="cross" value="NO">             ; Cross effect ("YES" or "NO")
+<param name="crossfactor" value="30">       ; Factor of cross effect
+<param name="rainsize" value="0">           ; Size of circular rain (0 = OFF)
+<param name="rainfactor" value="10">        ; Circular rain factor
+<param name="srainsize" value="0">          ; Size of square rain (0 = OFF)
+<param name="srainfactor" value="10">      ; Square rain factor
+<param name="fixdrop" value="NO">          ; Fixed drops ("YES" or "NO")
+<param name="fixdropX" value="0">          ; X coord of fixed drops
+<param name="fixdropY" value="0">          ; Y coord of fixed drops
+<param name="fixdropS" value="0">          ; Size of fixed drops
+<param name="fixdropF" value="0">          ; Factor of fixed drops
+<param name="pressure" value="400">        ; Rain pressure (1 .. 2000)
+<param name="fluidmode" value="water">     ; Fluidity ("water" or "oil")
+<param name="interactive" value="YES">     ; Interaction ("ON" .. "OFF")
+<param name="overimg" value="NO">          ; Optional image over applet
+<param name="overimgX" value="0">          ; Over image X offset
+<param name="overimgY" value="0">          ; Over image Y offset
+<param name="memdelay" value="1000">       ; Memory deallocation delay
+<param name="priority" value="3">          ; Task priority (1..10)
+<param name="MinSYNC" value="10">          ; Min. milliseconds/frame for sync
+Sorry, your browser doesn't support Java.  ; Message for no java browsers.
+</applet>                                  ; End of applet tag
+
+****************************************************************************
+
+INSTRUCTIONS.
+
+The following instructions describe how to change parameters:
+
+The images (GIF and/or JPG) can be of any size, but all image dimensions 
+must be identical.
+
+Attempting to change the "credits" parameter will disable the applet.
+
+To activate the reg parameters, please read the shareware registration notes.
+In the "regcode" parameter, place the registration code you purchased from 
+the author. If the code is correct and the applet is run from the registered 
+domain name, you can use "link" parameters to link to a URL when the applet 
+is mouse-clicked.
+
+If you set "regnewframe" to "YES", you can specify a specific frame location
+for the reglink:
+
+"_blank"  : To load the link in a new blank unnamed browser window.
+"_self"   : To load the link into the same window the applet occupies.
+"_parent" : To load the link into the immediate FRAMESET parent.
+"_top"    : To load the link into the top body of the window.
+
+You can also set a custom frame name, such as "myframe1".
+
+With the "overimg" parameter you can specify the name of an image that will
+be painted over the applet. The best options are transparent GIF images.
+NOTE: Animated GIF images are supported, but will be animated only on latest 
+browsers (Netscape 4 and Explorer 4 or newer).
+
+With "overimgX" and "overimgY" you can center the image over the applet area.
+
+The GIF/JPG image can be of any size. If res=1, remember to place the exact
+size of the image in "width" and "height" tags. If res=2, place doubled values,
+if res=3 tripled values etc.
+
+(In fact, res is a sort of zoomer).
+
+You can enable or disable the light shade calculation with "light" parameter.
+The effect without light calculations is faster, but less realistic.
+
+When light is enabled setting it to "YES", you can even choose the light
+and shadow intensity,  with "minlight" and "maxlight" parameters, which
+accept values randing from -255 to 255.
+
+If you set the "autodesign" parameter to "YES", an automatic slideshow of 
+the effects will be executed, and the next parameters are ignored; whereas
+with "NO", you have to configure the effects manually:
+
+[Manual configuration]
+
+The "density" parameter (2 .. 6) controls the density of fluid. Lower values
+mean more fluid liquid, so waves end quickly. Higher values cause a slower
+decadence of the waves.
+
+You can insert up to 2 fishes, with "fishnum" parameter.
+
+Other effects are: cross, rain and srain.
+
+Set the parameter "cross" to YES to activate this strange effect.
+The "crossfactor" parameter works as a "timer" between one cross and another.
+By setting "crossfactor" to 0, a new cross will appear every frame.
+Higher values mean more pause between one cross and another.
+
+The "rainsize" determines a circular rain. If it is set to zero= no
+rain. Values higher or equal to 1 will generate rain.
+To control it use "rainfactor" as seen for "crossfactor".
+
+The "srainsize" and "srainfactor" parameters work the same as "rainsize" and
+"rainfactor", but generate square rain.
+
+You can enable more than one effect at the same time.
+
+Another option is to enable the "fixdrop" parameter setting it to "YES",
+it will generate drops only at the fixed X and Y positions specified
+with the "fixdropX" and "fixdropY" parameters.
+The size and the frequency of these drops are determined by the parameters
+named "fixdropS" and "fixdropF".
+
+You can control the rain drops strength with the "pressure" parameter,
+with values from 1 to 2000.
+
+You can then control the degree of fluidity of the surface: setting the 
+"fluidmode" parameter to "water" will enable the water mode, otherwise set 
+it to "oil" for a more intense liquid.
+
+Setting the "interactive" parameter to "YES", will enable mouse pointer
+to generate waves when it's moved over the applet area.
+
+

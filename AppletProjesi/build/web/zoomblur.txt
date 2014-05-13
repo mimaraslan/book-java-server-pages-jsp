@@ -1,0 +1,268 @@
+
+          Zoom Blur Applet - Copyright (C) Anfy Team 2000-2002
+
+
+This applet displays a scrolling text, using coloured fonts.
+The text can scroll horizontally, vertically or with a circular move.
+You can add Blur or/and Zoom effect, and also stars using Anfy Font.
+This applet contains code by Kevin LEVRON, used under a licence.
+
+The coloured fonts are in AFT (Anfy Font) format.
+You can create your own aft fonts using a paint program, otherwise
+download freely the AFT fonts collection from here:
+
+  http://www.anfyteam.com/aft/
+
+***********************************************************************
+
+NECESSARY FILES.
+
+File to upload :
+- Anfy Font file (.aft) and its data gif image,
+- the ASCII file with your text,
+- the following 3 ".class" files : 
+
+zoomblur.class
+Lware.class
+anfy.class
+
+- Plus, zoomblur.jar for faster loading on recent browsers.
+
+***********************************************************************
+
+EXAMPLE.
+
+Insert the <applet> tag in your html document as follows to add this applet
+to your page (Comments after the ";" symbol are code explanations and
+acceptable min/max values. They are not part of the applet language):
+
+<applet archive="zoomblur.jar" code="zoomblur.class" width="300" height="100">
+<param name="credits" value="Applet by Fabio Ciucci (www.anfyteam.com)">
+<param name="res" value="1">			; Resolution (1..8)
+<param name="regcode" value="NO">		; Registration code (if you have it)
+<param name="reglink" value="NO">		; Optional URL link when the applet
+						  is "clicked".
+<param name="regnewframe" value="YES">          ; Reglink opened in new frame?
+<param name="regframename" value="_blank">      ; Name of new frame for reglink
+<param name="statusmsg" value="Zoom Blur">      ; Statusbar message
+
+<param name="font" value="carebearr.aft">	; AnfyFont filename
+<param name="text" value="txt.txt">		; Ascii file with text to plot
+<param name="bgcolor" value="000000">		; Background color (working only if zbmode=no)
+<param name="blur" value="8">			; Blur (color subtraction) value (1..255)
+<param name="displaymode" value="normal">	; Text display mode ("normal" or "over")
+<param name="texthspace" value="0">		; Horizontal space between letters
+<param name="delay" value="100">		; Frames to wait between texts switch
+<param name="delay1" value="100">		; Frames number the text is displayed
+<param name="zbmode" value="normal">		; Zoom blur mode ("normal","noblur","nozoom","no")
+<param name="zbcoef" value="95">		; Zoom levels distance coefficient (1..100)
+<param name="zbmove" value="no">		; Zoom blur movement ("no", "circle", "random")
+<param name="dx" value="0">			; X coord of the zoom's center (0=applet center)
+<param name="dy" value="0">			; Y coord of the zoom's center (0=applet center)
+<param name="txtmove" value="no">		; Text scrolling mode ("no", "horizontal", "vertical", "ellipse")
+<param name="speed" value="-8">			; Scrolling speed (can be negative)
+<param name="rx" value="0">			; Ellipse x radius (in txtmode=ellipse)
+<param name="ry" value="0">			; Ellipse y radius (in txtmode=ellipse)
+<param name="nbstars" value="0">		; Number of stars (0 = no stars)
+<param name="star" value="-">			; String wich represent stars (usually one char)
+<param name="stardisplaymode" value="over">	; Star display mode ("normal" or "over")
+
+<param name="overimg" value="NO">		; Optional image over applet
+<param name="overimgX" value="0">		; Over image X offset
+<param name="overimgY" value="0">		; Over image Y offset
+<param name="memdelay" value="1000">		; Memory deallocation delay
+<param name="priority" value="3">		; Task priority (1..10)
+<param name="MinSYNC" value="10">		; Min. milliseconds/frame for sync
+Sorry, your browser doesn't support Java.	; Message for no java browsers.
+</applet>					; End of applet tag
+
+
+*************************************************************************
+
+INSTRUCTIONS.
+
+The following instructions describe how to change parameters:
+
+Attempting to change the credits parameter will disable the applet.
+
+To activate the reg parameters, please read the shareware registration notes.
+In the "regcode" parameter, place the registration code you purchased from
+the author. If the code is correct and the applet is run from the registered
+domain name, you can use "link" parameters to link to a URL when the applet 
+is "clicked".
+
+If you set "regnewframe" to "YES", you can specify a specific frame location
+for the reglink:
+
+"_blank"  : To load the link in a new blank unnamed browser window.
+"_self"   : To load the link into the same window the applet occupies.
+"_parent" : To load the link into the immediate FRAMESET parent.
+"_top"    : To load the link into the top body of the window.
+
+You can also set a custom frame name, such as "myframe1".
+
+Applet size is determined by "res": "res=1" shows the graphic at original size,
+"res=2" shows it at double size, etc.
+So, If res=1, remember to place the exact size of image in "width" and "height" tags.
+If res=2, place double values, if res=3 place triple values etc. (In fact, res is
+a sort of zoomer).
+
+With the "statusmsg" parameter you can set a message which appear at the bottom
+of the browser window, when you mouse-over the applet. Enter any message here.
+
+With the "overimg" parameter you can specify the name of an image that will
+be painted over the applet. The best options are transparent GIF images.
+
+NOTE: Animated GIF images are supported, but will be animated only on latest
+browsers (Netscape 4 and Explorer 4 or newer).
+
+With "overimgX" and "overimgY" you can center the image over the applet area.
+
+The size of the applet is determined by width and height tags.
+
+With "font" parameter you can specify the AnfyFont file name (the .aft file).
+
+With "text" parameter you can specify the text file name.
+
+Note: Only characters present in the AFT font will be displayed.
+If the AFT font does not contain numbers, or special characters, those will 
+be simply ignored.
+
+With "bgcolor" you can set the background color in RGB hex value, like html
+format, but without the prefix "#". Default value is "000000" (black).
+Please note, this parameter will have effect only if zbmode="no".
+In fact, with other modes the blur effect is activated and the background
+will be black, since the blur fades to black.
+
+With "blur" parameter you can set the blur value (1..255), which is the
+color component subtracted for each level of blur to reach the black of
+the background.
+Lower values gives soft and more propagated blurring, higher values gives
+stronger decadence of color, fading to black sooner.
+
+With "displaymode" parameter you specify the text display mode:
+The "normal" value will draw replacing colors.
+The "over" will draw adding colors to what's on background (mixing).
+
+With "texthspace" parameter you specify the horizontal space between letters.
+
+With the "zbmode" parameter you can specify the ZoomBlur mode:
+"normal" = zoom & blur
+"noblur" = no blur effect
+"nozoom" = no zoom effect
+"no" = no zoom effect, no blur
+
+With the "zbcoef" parameter you can specify the Zoom levels distance coefficient,
+with values from 1 to 100. Lower values make the blur levels more distant, higher
+values make the blur levels nearer.
+
+With the "zbmove" parameter you can specify the Zoom blur movements.
+You can choose between "no", "circle", "random".
+
+If zbmove="no", you can specify the center of zoom with "dx" and "dy"
+parameters. The center of applet is equal to "0", and you can place
+positive or negative values to change the center of zooming.
+
+With the "txtmove" parameter you can specify the text scrolling mode,
+choosing from the values: "no" (no scrolling), "horizontal", "vertical"
+and "ellipse".
+
+If the "txtmove" is set to "no" or "ellipse", the texts are displayed
+line by line, and the "delay" and "delay1" parameters are activated to
+calibrate the timing of lines swapping:
+
+With "delay" parameter you specify the number of frames to wait between
+switch the text strings displayed.
+
+With "delay1" you specify the number of frames the text is displayed.
+Place here a value lower than "delay" to make the text disappear for a
+while between the text-lines swap.
+
+If the "txtmove" is set to "ellipse", you can also set the horizontal and
+vertical radius, repectively using the "rx" and "ry" parameters.
+
+If the "txtmove" is set to "horizontal" or "vertical", the text is scrolled
+continuously, at a speed choosen with the "speed" parameter.
+The "speed" parameter can be either negative or positive in order to get
+the different scrolling directions and speed.
+For left to right, or up to down scrolling set speed > 0.
+For right to left, or down to up scrolling set speed < 0.
+To calibrate speed, consider speed="8" scrolls 1 pixel per frame.
+In txtmove=horizontal case, it's suggested to use negative values, in
+order to scroll the text from right to left <-, even if it's possible to
+use positive values to have a strange scroller.
+To specify negative values use the "-" minus sign, for example: "-8".
+
+With the "nbstars" parameter you can set the stars number.
+Specify "0" for no stars.
+
+With the "star" parameter you can set the string wich represent stars.
+This string will be draw with corresponding Anfy Font. It's suggested
+to specify one only character, for example "*", "-", or a character
+which in the selected font have a nice image.
+However, you can also choose to use a string like "ANFY" as star.
+
+With the "stardisplaymode" parameter you can specify the way to
+draw the stars. Set it to "normal" to replace colors, or "over"
+to add colors over the existing background (mising).
+
+
+***********************************************************************
+
+THE AFT FORMAT SPECIFICATIONS
+
+If you are interested in creating new fonts for your personal use, or
+to add those to the freely usable AFT fonts collection, you should
+know how the AFT format works.
+
+An AFT font comprises 2 files, with a single prefix + different suffixes,
+for example:
+
+myfont.aft
+myfont.gif
+
+The .aft file is an ascii text file, editable by hand, and the gif file
+is an image file editable with any paint program.
+
+Both files must have the same prefix, and the suffixes should be in 
+lowercase.
+
+Here an example of .aft:
+
+
+myfont
+32
+23
+0
+ !#%%%%'()%%,-./0123456789:;%=%?@ABCDEFGHIJKLMNOPQRSTUVWXYZ%
+This is a comment... hello...
+
+
+The 1st line contains the name of the gif file, without .gif suffix.
+The 2nd line contains the font width.
+The 3rd line contains the font height.
+The 4th line contains the Y spacing between characters.
+The 5th line contains the characters index (its order in GIF image)
+
+For example, if a font is painted as:
+
+ABCDE
+FGHIJ
+KLMNO
+
+The fontindex will be: ABCDEFGHIJKLMNO
+
+But, if a font is painted as:
+
+AEIMQUY
+BFJNRVZ
+CGKOSW!
+DHLPTX#
+
+The fontindex will be: AEIMQUYBFJNRVZCGKOSW!DHLPTX#
+
+Note: the background of the gif image must be black (000000 in hex), and the
+black must be present only in the background, otherwise the background
+colour changes a function in the scroller applet and this will cause problems.
+
+

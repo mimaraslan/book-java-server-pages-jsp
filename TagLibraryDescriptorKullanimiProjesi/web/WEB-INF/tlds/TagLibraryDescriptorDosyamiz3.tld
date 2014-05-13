@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <jsp-version>2.0</jsp-version>
+  <short-name>taglibrarydescriptordosyamiz3</short-name>
+  <uri>/WEB-INF/tlds/TagLibraryDescriptorDosyamiz3</uri>
+  <info>Tags Library Descriptor TLD 3</info>
+
+  <tag>
+    <name>TagLibraryDescriptorDosyamiz3</name>
+    <tag-class>paketimiz3.TagLibraryDescriptorDosyamizinKullandigiSinif3</tag-class>
+    <tei-class>paketimiz3.TagLibraryDescriptorDosyamizinKullandigiSinif3TEI</tei-class>
+    
+    <body-content>JSP</body-content>
+    <info>ucuncu TLD dosya tagimiz</info>
+  </tag>
+
+</taglib>

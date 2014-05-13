@@ -1,0 +1,201 @@
+
+                  StarText - Copyright (C) by Anfy Team 2000-2002
+
+This applet shows a perspective text scroller like in the starting titles
+of the "Star Wars" movie. The text starts from the screen bottom and scrolls
+to the top, fading to a choosen color.
+
+************************************************************************
+
+NECESSARY FILES.
+
+Apart from an optional background image and an optional overlay image,
+the following 3 ".class" files must be uploaded: 
+
+startext.class
+Lware.class
+anfy.class
+
+
+Plus, startext.jar for speedy loading on recent browsers.
+
+*********************************************************************
+
+EXAMPLE.
+
+Insert the <applet> tag in your html document as follows to add this applet
+to your page (Comments after the ";" symbol are code explanations and
+acceptable min/max values. They are not part of the applet language):
+
+
+<applet archive="startext.jar" code="startext.class" width="350" height="200">			; Name, Width, Height.
+<param name="credits" value="Applet by Anfy Team (www.anfyteam.com)">	; Credits line.
+<param name="regcode" value="no">               ; Registration code (if you have it).
+<param name="reglink" value="no">               ; Optional URL link when the applet is "clicked".
+<param name="regnewframe" value="yes">          ; Reglink opened in new frame ?
+<param name="regframename" value="_blank">      ; Name of new frame for reglink.
+<param name="statusmsg" value="Star Wars applet"> ; Statusbar message.
+<param name="res" value="1">                    ; Resolution (1-8).
+<param name="textfilename" value="star.txt">    ; Text file name to scroll.
+<param name="textfont" value="Dialog">          ; Font name
+<param name="textbold" value="YES">             ; Font bold style ("yes" or "no")
+<param name="textitalic" value="NO">            ; Font italic style ("yes" or "no")
+<param name="textsize" value="24">              ; Font size.
+<param name="textcolor" value="ffff00">         ; Text color.
+<param name="textcolorfar" value="ffff00">      ; Text far color.
+<param name="textcenter" value="yes">           ; Used to center the text.
+<param name="textloop" value="yes">             ; Loop the text on/off.
+<param name="textlooptime" value="300">         ; Time between a loop and another.
+<param name="textscrollspeed" value="50">       ; Scroll speed.
+<param name="textlinespace" value="0">          ; Space between a line and another.
+<param name="textDist" value="400">             ; Text distance from the screen.
+<param name="textzoom" value="100">             ; How much zoom the text.
+<param name="textangle" value="1.28">           ; The angle for the text.
+<param name="textanglechange" value="no">       ; Change the text angle ("yes" or "no")
+<param name="textanglespeed" value="0.003">     ; The angle changing speed.
+<param name="textanglemin" value="0.003">       ; The angle changing min value.
+<param name="textanglemax" value="0.003">       ; The angle changing max value.
+<param name="textStopMouse" value="yes">        ; Stop text when mouse is over the applet ("yes" or "no")
+<param name="starsNumber" value="1500">	        ; The number of stars to draw.
+<param name="starsDiffSize" value="yes">        ; Use different sizes for the stars.
+<param name="starsMaxSize" value="3">           ; Set the max pixels size.
+<param name="starsColor" value="ffffff">        ; Stars color.
+<param name="starsColorFar" value="ffffff">     ; Stars far color.
+<param name="starsSpeed" value="20">            ; Stars speed.
+<param name="starsSmooth" value="yes">          ; Smooth the stars colors ("yes","no").
+<param name="starsScreenDist" value="100">      ; Stars distance from the screen.
+<param name="starsMaxZ" value="400">            ; Stars max z distance value.
+<param name="starsZangle" value="0.01">         ; Stars rotation angle.
+<param name="backImage" value="nebula.jpg">     ; Background image or "NO"
+<param name="bgColor" value="000000">           ; Background color.
+<param name="overimg" value="no">               ; Optional image over applet.
+<param name="overimgX" value="0">               ; Over image X offset
+<param name="overimgY" value="0">               ; Over image Y offset
+<param name="memdelay" value="1000">            ; Memory deallocation delay.
+<param name="priority" value="3">               ; Task priority (1..10).
+<param name="MinSYNC" value="10">               ; Min. milliseconds/frame for sync.
+Sorry, your browser doesn't support Java.       ; Message for no java browsers.
+</applet>
+
+*********************************************************************
+
+PARAMETER DESCRIPTIONS.
+
+The following instructions describe how to change parameters:
+
+Attempting to change the credit parameter will disable the applet.
+To activate the reg parameters read the shareware registration notes.
+In the "regcode" parameter, place the registration code you
+purchased from the author. If the code is correct and the applet is run from
+the registered domain name, you can use "link" parameters to link to a URL
+when the applet is "clicked".
+
+If you set "regnewframe" to "YES", you can specify a specific frame location
+for the reglink:
+
+"_blank"  : To load the link in a new blank unnamed browser window.
+"_self"   : To load the link into the same window the applet occupies.
+"_parent" : To load the link into the immediate FRAMESET parent.
+"_top"    : To load the link into the top body of the window.
+
+You can also set a custom frame name, such as "myframe1".
+
+With the "overimg" parameter you can specify the name of an image that will
+be painted over the applet. The best options are transparent GIF images.
+NOTE: Animated GIF images are supported, but will be displayed as animated
+only on latest browsers (Netscape 4 and Explorer 4 or newer).
+With "overimgX" and "overimgY" you can center the image over the applet area.
+
+With the "statusmsg" parameter you can set a message which appear at the
+bottom of the browser window, when you mouse-over the applet.
+Enter any message here.
+
+Applet size is determined by "res": "res=1" shows the graphic at original size,
+"res=2" shows it at double size, etc.
+So, If res=1, remember to place the exact size of image in "width" and "height" tags.
+If res=2, place double values, if res=3 place triple values etc.
+(In fact, res is a sort of zoomer).
+
+** Text scroll parameters:
+
+Use the "textfile" parameter to set the file where is stored the text to scroll.
+
+With the "font" parameter, you can set the name of the font you want to use
+For Applets usually only these 4 defaults fonts are available: Helvetica, TimesRoman,
+Courier, Dialog.
+
+To choose a size for the font, use the "fontsize" parameter.
+
+Set the "fontbold" parameter to "yes" to apply bold style.
+Set the "fontitalic" parameter to "yes" to apply italic style.
+
+With the "textcolor" parameter, you can set the text color (use hex RRGGBB format).
+With the "textcolorfar" parameter, you can set the far text color.
+
+If you want center the text lines, se the "textcenter" parameter to "yes".
+
+If the text have to be displayed again continuously when finished, set the
+"textloop" parameter to "yes".
+
+Also, you can increase or decrease time to wait between the loops, using
+the "textlooptime" parameter.
+Positive values gain more time, negatives values lost time (new loop starts sooner).
+You can use "textlooptime" only if "textloop" is set to "yes".
+
+With the "textscrollspeed" parameter you set the scroll speed for the text.
+
+Optionally, increase spacing between lines with the "textlinespace" parameter.
+
+With "textDist" parameter you set the distance of the text: use greater values
+to send far away the text.
+Use the "textzoom" parameter if you want to zoom in or out the text on the screen. 
+
+Set the angle of text scroll, using a floating point value for the "textangle".
+Default value is "1.3", and setting it to "0.0" you will obtain a normal
+vertical text scroller.
+
+Optionally, you can enable angle bouncing with "textanglechange" parameter = "yes".
+In this mode, you will have to set "textanglespeed", "textanglemin" and
+"textanglemax" parameters with respectively: speed of angle changing, min
+and max reachable angle values.
+
+If you want to stop the text when you enter the applet area, set the
+"textStopMouse" parameter to "yes".
+
+** Background parameters:
+
+With the "backImage" parameter, you can place an image as applet's background,
+otherwise set it to "NO".
+
+You can choose a background color, with the "bgColor" parameter.
+
+** Optional stars parameters:
+
+With the "starsNumber" parameter, you choose the number of stars to plot.
+Set it to "0" to have no stars.
+
+Using the "starsDiffSize", you can enable the stars perspective: setting it to
+"yes", the stars size will increase while becoming near.
+
+With the "starsMaxSize", you set the max size in pixels reachable by stars.
+This parameter works only if "starsDiffSize" is set to "yes".
+
+Use the "starsColor" parameter to set stars color (as hex RRGGBB format).
+Use the "starsColorFar" parameter to set far stars color.
+Set to "yes" the "starsSmooth" if you want to draw stars with different
+smoothed colors according to near and far color parameters.
+Otherwise all the stars will be drawn with starsColor parameter.
+
+Use the "starsSpeed" parameter to set the stars speed.
+
+To set the stars distance, use the "starsScreenDist" parameter: greater values
+bring nearer the stars.
+Small values will send far away the stars origin.
+
+With the "starsMaxZ", you set the max stars distance on the z axis; use big
+values to add distance to the stars origin.
+
+Place in the "starsZangle" parameter a floating point value for the stars
+rotation speed. Use negative values for inverse rotation.
+
+

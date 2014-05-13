@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <jsp-version>2.0</jsp-version>
+  <short-name>taglibrarydescriptortld2</short-name>
+  <uri>/WEB-INF/tlds/TagLibraryDescriptorTLD2</uri>
+  <info>Tags Library Descriptor TLD 2 hakkinda aciklama</info>
+
+     <tag>
+      <name>TLDisimi1</name>
+      <tag-class>paketimiz.CustomTagLibraryKullanimiJavaSinifi</tag-class>
+      <body-content>empty</body-content>
+      <info>TLDisimi1 hakkinda aciklama</info>
+    </tag>
+
+    <tag>
+      <name>TLDisimi2</name>
+      <tag-class>paketimiz2.CustomTagLibraryKullanimiJavaSinifi2</tag-class>
+      <body-content>empty</body-content>
+      <info>TLDisimi2 hakkinda aciklama</info>
+    </tag>
+
+     <tag>
+      <name>TLDisimi3</name>
+      <tag-class>paketimiz2.CustomTagLibraryKullanimiJavaSinifi2</tag-class>
+      <body-content>empty</body-content>
+      <info>TLDisimi3 hakkinda aciklama</info>
+    </tag>
+
+</taglib>

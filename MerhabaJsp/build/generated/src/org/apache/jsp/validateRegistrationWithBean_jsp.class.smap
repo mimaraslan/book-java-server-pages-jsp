@@ -1,0 +1,20 @@
+SMAP
+validateRegistrationWithBean_jsp.java
+JSP
+*S JSP
+*F
++ 0 validateRegistrationWithBean.jsp
+validateRegistrationWithBean.jsp
+*L
+3,16:45
+18:60,9
+19:69
+20:70,2
+21:72
+24,9:75
+32,2:84
+34:86,5
+35:91
+38,3:94
+40,7:97
+*E

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>taglibrarydescriptordosyamiz</short-name>
+  <uri>/WEB-INF/tlds/TagLibraryDescriptorDosyamiz</uri>
+   <info>Tag Library Descriptor Dosyamiz Aciklamasi</info>
+ <tag>
+             <name>TagLibraryDescriptorDosyamiz</name>
+             <tag-class>paketimiz.TagLibraryDescriptorDosyamizinKullandigiSinif</tag-class>
+             <body-content>scriptless</body-content>
+             <info>JSP sayfasında kullanilan TLD dosyasinin Adinin Aciklamasi</info>
+    <attribute>
+      <name>mesajimiz</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+
+    <attribute>
+      <name>rengi</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+
+    <attribute>
+      <name>buyukluk</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+    </attribute>
+
+
+ </tag>
+
+</taglib>

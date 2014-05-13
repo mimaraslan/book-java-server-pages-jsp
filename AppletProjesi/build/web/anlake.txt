@@ -1,0 +1,128 @@
+
+          Anfy Lake - Copyright (C) by Fabio Ciucci 1998-2002
+
+
+This applet can generate a reflection effect under any GIF or JPG image.
+It is very similiar to the Lake and DorianGray applets made by other authors,
+but this one has a different approach. Since it it calculated in realtime,
+it requires less memory (about 10 times less!).
+
+The animation duck.gif is a courtesy of mstanya@bigfoot.com
+The mountains example is a courtesy of Laurie Moyer
+
+This applet is fully parametrized, so you can generate many kinds of lake
+effects.
+
+**************************************************************************
+
+NECESSARY FILES.
+
+As well as an image to be animated and an optional overlay image, the 
+following 3 ".class" files must be uploaded: 
+
+AnLake.class  
+Lware.class
+anfy class
+
+Plus, AnLake.jar for speedy loading on recent browsers.
+
+*************************************************************************
+
+EXAMPLE.
+
+Insert the <applet> tag in your html document as follows to add this applet
+to your page (Comments after the ";" symbol are code explanations and
+acceptable min/max values. They are not part of the applet language):
+
+
+<applet archive="AnLake.jar" code="AnLake.class" width="300" height="256">
+<param name="credits" value="Applet by Fabio Ciucci (www.anfyteam.com)">
+<param name="regcode" value="NO">         ; Registration code (if you have it)
+<param name="reglink" value="NO">         ; Optional URL link
+<param name="regnewframe" value="YES">    ; Reglink opened in new frame?
+<param name="statusmsg" value="AnLake applet">  ; Statusbar message
+<param name="res" value="1">              ; resolution (1 .. 8)
+<param name="image" value="palio.jpg">  ; Image to load
+<param name="wavspeed" value="30">      ; Waving speed (1..200)
+<param name="perspective" value="10">   ; Perspective (1..100)
+<param name="farwaving" value="200">    ; Far waving intensity (1..10000)
+<param name="wind" value="10">          ; Wind intensity (1..20)
+<param name="windvarval" value="5">     ; Wind variation speed (0..200)
+<param name="windvarmin" value="5">     ; Wind variation min (0..20)
+<param name="windvarmax" value="15">    ; Wind variation max (0..20)
+<param name="halfreflect" value="YES">  ; Half sized reflect area ("YES","NO")
+<param name="overimg" value="NO">       ; Optional image over applet
+<param name="overimgX" value="0">       ; Over image X offset
+<param name="overimgY" value="0">       ; Over image Y offset
+<param name="memdelay" value="1000">    ; Memory deallocation delay
+<param name="priority" value="3">       ; Task priority (1..10)
+<param name="MinSYNC" value="10">       ; Min. milliseconds/frame for sync
+Sorry, your browser doesn't support Java. ; Msg in no java browsers
+</applet>
+
+**********************************************************************
+
+INSTRUCTIONS.
+
+The following instructions describe how to change parameters:
+
+Note: attempting to alter the "credits" parameter will disable the applet.
+
+To activate the "reg" parameters read the shareware registration notes.
+In the "regcode" parameter, place the registration code you purchased 
+from the author. If the code is correct and the applet is run from
+the registered domain name, you can use "link" parameters to link to a URL
+when the applet is "clicked".
+
+If you set "regnewframe" to "YES", you can specify a specific frame location
+for the reglink:
+
+"_blank"  : To load the link in a new blank unnamed browser window.
+"_self"   : To load the link into the same window the applet occupies.
+"_parent" : To load the link into the immediate FRAMESET parent.
+"_top"    : To load the link into the top body of the window.
+
+You can also set a custom frame name, such as "myframe1".
+
+With the "overimg" parameter you can specify the name of an image that will
+be painted over the applet. The best options are transparent GIF images.
+NOTE: Animated GIF images are supported, but will be displayed as animated
+sequence only on latest browsers (Netscape 4 and Explorer 4 or newer).
+With "overimgX" and "overimgY" you can center the image over the applet area.
+
+The GIF/JPG image can be of any size. The applet size must be the same width
+as the image, and double in height. For example,if the image is 160x100, the
+applet size must be 160x200.
+
+Instead, if "halfreflect" parameter="YES", the size of applet has to be set to
+160x150, in other words 3/2 of original size (original size * 1.5).
+
+If res=1, remember to place the exact size of the image in "width" and "height"
+tags, with height multiplied by 2 (or by 1.5 if halfreflect="YES").
+If res=2, place doubled values of width and quadrupled of height, if res=3
+triple values of width, sit times the height, etc.
+(The "res" parameter is a sort of zoomer).
+
+The "wavspeed" parameter (values from 1 to 200) allows you to determine the
+speed of waving.
+
+With "perspective" parameter (values from 1 to 100), you decide how the waves
+have to be stretched for perspective simulation.
+
+The "farwaving" parameter (values from 1 to 10000) allows you to determine
+how strong the far waves (top of lake) must be.
+
+With "wind" parameter (values from 1 to 20), you decide how strong the waving
+will be.
+
+Optionally, you can make the wind dynamically change, setting the
+parameter "windvarval" as higher than 0 (higher values mean higher change).
+Then, with the parameters "windvarmin" and "windvarmax" you can control the
+min and max values of wind reached.
+
+Usually, the reflected area is same size of the normal display area.
+If you want, you can change this ratio, setting "halfreflect" to "YES".
+The reflect area then will become half size of original image, but remember
+to make applet height size = original imagesize * 1.5 , instead of * 2.
+
+

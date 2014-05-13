@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Document   : etiketDosyalariniKullananSayfamiz3
+    Created on : 7.Tem.2010, 16:11:40
+    Author     : M.ASLAN
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0" xmlns:t="urn:jsptagdir:/WEB-INF/tags">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+
+    <!-- any content can be specified here, e.g.: -->
+    <jsp:element name="text">
+        <jsp:attribute name="lang">TR</jsp:attribute>
+
+        <jsp:body><font color="red">Güzel gören</font>
+
+           <t:tagdosyasi3 birinciSoz="güzel düşünür," 
+                          ikinciSoz="güzel düşünen"
+                          ucuncuSoz="hayatından" />
+
+            <jsp:text><font color="blue">lezzet alır.</font></jsp:text>
+
+        </jsp:body>
+    </jsp:element>
+
+</jsp:root>

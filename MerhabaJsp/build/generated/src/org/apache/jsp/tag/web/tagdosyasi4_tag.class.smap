@@ -1,0 +1,51 @@
+SMAP
+tagdosyasi4_tag.java
+JSP
+*S JSP
+*F
++ 0 tagdosyasi4.tag
+WEB-INF/tags/tagdosyasi4.tag
++ 1 eklenecek_tagdosyasi.tag
+WEB-INF/tags/../tags/eklenecek_tagdosyasi.tag
++ 2 eklenecek_tagxdosyasi.tagx
+WEB-INF/tags/eklenecek_tagxdosyasi.tagx
++ 3 eklenecek_tagfdosyasi_standart.tagf
+WEB-INF/tags/eklenecek_tagfdosyasi_standart.tagf
++ 4 eklenecek_tagfdosyasi_xml.tagf
+WEB-INF/tags/eklenecek_tagfdosyasi_xml.tagf
++ 5 eklenecek_htmlsayfasi.html
+etiketDosyalariOrnek4/eklenecek_htmlsayfasi.html
++ 6 eklenecek_jspsayfasi.jsp
+etiketDosyalariOrnek4/eklenecek_jspsayfasi.jsp
++ 7 eklenecek_jspxsayfasi.jspx
+etiketDosyalariOrnek4/eklenecek_jspxsayfasi.jspx
++ 8 eklenecek_jspsayfasi_standart.jspf
+etiketDosyalariOrnek4/eklenecek_jspsayfasi_standart.jspf
++ 9 eklenecek_jspxsayfasi_xml.jspf
+etiketDosyalariOrnek4/eklenecek_jspxsayfasi_xml.jspf
+*L
+5,5:59
+5#1,3:63
+9#0,3:66
+9#2:68,7
+9:69,4
+9:71
+9:73
+11#0,3:75
+1#3,3:77
+13#0,3:79
+1#4,6:81
+15#0,3:87
+1#5,2:89
+17#0,3:91
+5#6,3:93
+19#0,3:96
+6#7:98,7
+6:99,4
+6:101
+6:103
+21#0,3:105
+1#8,2:107
+23#0,3:109
+1#9:111
+*E
